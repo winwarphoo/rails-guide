@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+%w(chaw chue htun khin set win tomo akane kazu misa).each do |c|
+  Client.create(first_name: c)
+end
