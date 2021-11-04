@@ -1,0 +1,18 @@
+p#notice
+  = notice
+h1
+  | Articles
+p
+  = distance_of_time_in_words(Time.now, Time.now + 15.hours)
+table
+  thead
+    tr
+      th
+        | Title
+      th
+        | Body
+      th[colspan="3"]
+  tbody
+    = render partial: @articles, layout: 'box', spacer_template: 'article_ruler'
+br
+= link_to 'New Article', new_article_path
